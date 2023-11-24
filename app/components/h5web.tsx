@@ -15,8 +15,7 @@ import { App, H5GroveProvider, MockProvider } from "@h5web/app";
       </H5GroveProvider> */
 }
 
-// bcd0c827-9c88-426f-87f9-b8a8dd5feb1f
-// http://api.ramanchada.ideaconsult.net/dataset/bcd0c827-9c88-426f-87f9-b8a8dd5feb1f&path=%2F
+// https://api.ramanchada.ideaconsult.net/h5grove/paths/?path=%2F&resolve_links=only_valid&file=bcd0c827-9c88-426f-87f9-b8a8dd5feb1f.nxs
 
 function H5web({ urls }) {
   console.log(urls[0]);
@@ -24,9 +23,13 @@ function H5web({ urls }) {
   return (
     <div>
       <H5GroveProvider
-        url="https://bosquet.silx.org/h5grove/meta/?file=water_224.h5&path=%2F"
-        filepath="/meta/?file=bcd0c827-9c88-426f-87f9-b8a8dd5feb1f"
-        axiosParams={{ file: "bcd0c827-9c88-426f-87f9-b8a8dd5feb1f" }}
+        url="https://api.ramanchada.ideaconsult.net/h5grove/"
+        filepath="ef6ea2de-55da-4fa6-9abc-e9b3c0077e38.nxs"
+        axiosConfig={{
+          mode: "no-cors",
+          withCredentials: false,
+          params: { file: "ef6ea2de-55da-4fa6-9abc-e9b3c0077e38.nxs" },
+        }}
       >
         <App />
       </H5GroveProvider>

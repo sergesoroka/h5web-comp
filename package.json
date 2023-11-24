@@ -2,6 +2,7 @@
   "name": "h5web-comp",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://api.ramanchada.ideaconsult.net/h5grove/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

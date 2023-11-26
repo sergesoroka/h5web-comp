@@ -1,10 +1,10 @@
 // @ts-nocheck
-import MenubarDemo from "./Menubar/Menubar";
+import SelectDemo from "./SelectFile";
 
 function Header({ fileList, radioSelection, setRadioSelection }) {
   return (
     <div className="h-14 pt-2">
-      <MenubarDemo
+      <SelectDemo
         fileList={fileList}
         setRadioSelection={setRadioSelection}
         radioSelection={radioSelection}

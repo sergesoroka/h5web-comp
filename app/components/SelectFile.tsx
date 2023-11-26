@@ -14,8 +14,8 @@ const SelectDemo = ({ fileList, radioSelection, setRadioSelection }) => (
       className="inline-flex items-center justify-center rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-white text-violet11  hover:bg-mauve3  data-[placeholder]:text-violet9 outline-none"
       aria-label="Food"
     >
-      <span className="block mr-2 leading-tight font-medium bg-[#c0da74] px-2 py-1 rounded-sm">
-        FILE:
+      <span className="block mr-2 tracking-wide font-medium bg-[#c0da74] px-2 py-1 rounded-sm">
+        FILE
       </span>{" "}
       <Select.Value placeholder="Select a file…" />
       <Select.Icon className="text-violet11">
@@ -29,9 +29,9 @@ const SelectDemo = ({ fileList, radioSelection, setRadioSelection }) => (
         </Select.ScrollUpButton>
         <Select.Viewport className="p-[5px]">
           <Select.Group>
-            <Select.Label className="px-[25px] text-xs leading-[25px] text-mauve11">
+            {/* <Select.Label className="px-[25px] text-xs leading-[25px] text-mauve11">
               Files:
-            </Select.Label>
+            </Select.Label> */}
             {fileList.map((item, i) => (
               <SelectItem
                 key={i}

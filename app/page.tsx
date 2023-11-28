@@ -1,7 +1,9 @@
 import PageWrapper from "./components/PageWrapper";
 
 async function getData() {
-  const res = await fetch("https://api.ramanchada.ideaconsult.net/dataset/");
+  const res = await fetch("https://api.ramanchada.ideaconsult.net/dataset/", {
+    next: { revalidate: 600 },
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
